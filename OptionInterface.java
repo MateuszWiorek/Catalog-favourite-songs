@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-import static com.wiorekmateusz.FavouriteSongsInterface.scrollPane;
 
 public class OptionInterface extends JPanel implements ActionListener{
     private JTextField author, title;
