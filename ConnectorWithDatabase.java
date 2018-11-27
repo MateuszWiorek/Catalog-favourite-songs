@@ -1,5 +1,6 @@
 package com.wiorekmateusz;
 import java.sql.*;
+import java.util.List;
 import java.util.Vector;
 
 public class ConnectorWithDatabase {
@@ -7,7 +8,7 @@ public class ConnectorWithDatabase {
     ResultSet rec;
     FavouriteSongsList song = new FavouriteSongsList();
 
-    public Vector<FavouriteSongs> viewAll() {
+    public List<FavouriteSongs> viewAll() {
         try (
                 Connection conn = DriverManager.getConnection(data, "root", "");
                 Statement st = conn.createStatement()) {
@@ -26,7 +27,7 @@ public class ConnectorWithDatabase {
     }
 
 
-public Vector<FavouriteSongs> searchByTitle(String searchingTitle){
+public List<FavouriteSongs> searchByTitle(String searchingTitle){
     try(
             Connection conn = DriverManager.getConnection(data, "root","");
             Statement st = conn.createStatement()){
@@ -44,7 +45,7 @@ public Vector<FavouriteSongs> searchByTitle(String searchingTitle){
     return null;
 }
 
-public  Vector <FavouriteSongs> searchByAuthor(String searchingAuthor) {
+public  List <FavouriteSongs> searchByAuthor(String searchingAuthor) {
     try (
 
             Connection conn = DriverManager.getConnection(data, "root", "");
